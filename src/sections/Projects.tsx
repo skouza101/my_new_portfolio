@@ -56,8 +56,14 @@ export const ProjectsSection = () => {
       />
       <div className="container flex flex-col gap-20 mt-10 md:mt-20 ">
         {portfolioProjects.map((project, index) => (
-          <Card key={index}>
-            <div className="lg:grid lg:grid-cols-2 lg:gap-16 px-8 pt-6 md:px-10 md:pt-12 lg:px-20 lg:pt-16">
+          <Card
+            key={index}
+            className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+            style={{
+              top: `calc(64px + ${index * 40}px)`,
+            }}
+          >
+            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16 ">
                 <div className="flex justify-between">
                   <div className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent text-sm md:text-lg uppercase font-semibold tracking-widest gap-2 inline-flex">
@@ -90,10 +96,10 @@ export const ProjectsSection = () => {
               </div>
               <div className="relative">
                 <Image
-                src={project.image}
-                alt={project.title}
-                className="-mb-4 mt-6 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-              />
+                  src={project.image}
+                  alt={project.title}
+                  className="-mb-4 mt-6 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                />
               </div>
             </div>
           </Card>
