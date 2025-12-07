@@ -10,6 +10,14 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GitHubIcon from "@/assets/icons/github.svg";
 import map from "@/assets/images/map.png";
+import {
+  FaPython,
+  FaLaravel,
+  FaJava,
+  FaNodeJs,
+  FaDocker,
+} from "react-icons/fa6";
+import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 const skills = [
   {
@@ -25,8 +33,40 @@ const skills = [
     icon: JavaScriptIcon,
   },
   {
+    name: "TypeScript",
+    icon: SiTypescript,
+  },
+  {
     name: "React",
     icon: ReactIcon,
+  },
+  {
+    name: "Next.js",
+    icon: SiNextdotjs,
+  },
+  {
+    name: "Tailwind",
+    icon: SiTailwindcss,
+  },
+  {
+    name: "Node.js",
+    icon: FaNodeJs,
+  },
+  {
+    name: "Python",
+    icon: FaPython,
+  },
+  {
+    name: "Laravel",
+    icon: FaLaravel,
+  },
+  {
+    name: "Java",
+    icon: FaJava,
+  },
+  {
+    name: "Docker",
+    icon: FaDocker,
   },
   {
     name: "Chrome",
@@ -62,6 +102,10 @@ const myHobbies = [
   {
     name: "Fitness",
     icon: "🏋️",
+  },
+  {
+    name: "Photography",
+    icon: "📷",
   },
 ];
 
@@ -124,19 +168,47 @@ export const AboutSection = () => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 mt-auto">
-                    {skills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="group flex items-center gap-3 p-3 md:p-4 rounded-xl bg-white/5 hover:bg-gradient-to-r hover:from-sky-400/10 hover:to-blue-500/10 border border-transparent hover:border-white/10 transition-all duration-300"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                      >
-                        <skill.icon className="size-8 md:size-10 text-sky-400 group-hover:scale-110 transition-transform duration-300" />
-                        <span className="text-sm md:text-base font-medium group-hover:text-white transition-colors">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
+                  <div className="flex flex-col gap-6 mt-auto overflow-hidden">
+                    <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)]">
+                      {[...new Array(2)].map((_, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-none gap-8 animate-move-left [animation-duration:30s] pr-8"
+                        >
+                          {skills.map((skill, index) => (
+                            <div
+                              key={index}
+                              className="inline-flex items-center gap-4 py-2 px-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                            >
+                              <skill.icon className="size-8 md:size-10 text-sky-400" />
+                              <span className="text-sm md:text-base font-medium text-white/80">
+                                {skill.name}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)]">
+                      {[...new Array(2)].map((_, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-none gap-8 animate-move-right [animation-duration:30s] pr-8"
+                        >
+                          {skills.map((skill, index) => (
+                            <div
+                              key={index}
+                              className="inline-flex items-center gap-4 py-2 px-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                            >
+                              <skill.icon className="size-8 md:size-10 text-sky-400" />
+                              <span className="text-sm md:text-base font-medium text-white/80">
+                                {skill.name}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -160,20 +232,51 @@ export const AboutSection = () => {
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-3 mt-auto">
-                    {myHobbies.map((hobby, index) => (
-                      <div
-                        key={index}
-                        className="group relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-sky-400/10 to-blue-500/10 border border-white/10 hover:border-sky-400/50 hover:from-sky-400/20 hover:to-blue-500/20 hover:shadow-lg hover:shadow-sky-400/10 transition-all duration-300 cursor-default"
-                      >
-                        <span className="text-sm md:text-base font-medium text-white/80 group-hover:text-white transition-colors">
-                          {hobby.name}
-                        </span>
-                        <span className="text-lg md:text-xl group-hover:scale-125 transition-transform duration-300">
-                          {hobby.icon}
-                        </span>
-                      </div>
-                    ))}
+                  <div className="relative flex-1 flex flex-col gap-6 mt-6 overflow-hidden">
+                    <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)]">
+                      {[...new Array(2)].map((_, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-none gap-6 animate-move-left [animation-duration:30s] px-3"
+                        >
+                          {myHobbies.map((hobby, index) => (
+                            <div
+                              key={index}
+                              className="group relative flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-400/10 to-blue-500/10 border border-white/10 hover:border-sky-400/50 hover:from-sky-400/20 hover:to-blue-500/20 hover:shadow-lg hover:shadow-sky-400/10 transition-all duration-300 cursor-default whitespace-nowrap"
+                            >
+                              <span className="text-sm md:text-base font-medium text-white/80 group-hover:text-white transition-colors">
+                                {hobby.name}
+                              </span>
+                              <span className="text-lg md:text-xl group-hover:scale-125 transition-transform duration-300">
+                                {hobby.icon}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)]">
+                      {[...new Array(2)].map((_, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-none gap-6 animate-move-right [animation-duration:30s] px-3"
+                        >
+                          {myHobbies.map((hobby, index) => (
+                            <div
+                              key={index}
+                              className="group relative flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-sky-400/10 to-blue-500/10 border border-white/10 hover:border-sky-400/50 hover:from-sky-400/20 hover:to-blue-500/20 hover:shadow-lg hover:shadow-sky-400/10 transition-all duration-300 cursor-default whitespace-nowrap"
+                            >
+                              <span className="text-sm md:text-base font-medium text-white/80 group-hover:text-white transition-colors">
+                                {hobby.name}
+                              </span>
+                              <span className="text-lg md:text-xl group-hover:scale-125 transition-transform duration-300">
+                                {hobby.icon}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

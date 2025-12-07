@@ -9,7 +9,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-52 lg:py-64 relative z-0 overflow-hidden ">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         <div
           className="absolute inset-0 -z-10 opacity-10 "
           style={{ backgroundImage: `url(${grainImage.src})` }}

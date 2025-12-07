@@ -23,11 +23,16 @@ const config: Config = {
     extend: {
       animation: {
         "move-left": "move-left 1s linear infinite",
+        "move-right": "move-right 1s linear infinite",
       },
       keyframes: {
         "move-left": {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        "move-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },
