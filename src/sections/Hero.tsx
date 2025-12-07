@@ -5,10 +5,11 @@ import Star from "@/assets/icons/star.svg";
 import Sparkle from "@/assets/icons/sparkle.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-52 lg:py-64 relative z-0 overflow-hidden ">
+    <section className="py-32 md:py-52 lg:py-64 relative z-0 overflow-hidden " id="home">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         <div
           className="absolute inset-0 -z-10 opacity-10 "
@@ -214,28 +215,27 @@ export const HeroSection = () => {
             Building exceptional user experiences
           </h1>
           <p className="text-lg lg:text-xl text-center text-white/60 tracking-wide mt-4">
-            I specialize in user-centered design, crafting intuitive and
-            engaging interfaces for websites, mobile apps, and software to
-            ensure seamless and enjoyable user experiences.
+            hey there, im <span className="bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent font-bold tracking-wider">Marwane Oraiche</span>, a web developer based in sidi bennour, Morocco.
+            I specialize in user-centered design, crafting intuitive and engaging interfaces for websites, mobile apps, and software to ensure seamless and enjoyable user experiences.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
-          <button className="inline-flex items-center gap-2 px-6 py-2 border border-gray-800 rounded-xl h-12 ">
+          <Link href="#projects" className="inline-flex items-center gap-2 px-6 py-2 border border-gray-800 rounded-xl h-12 " >
             <span className="text-sm lg:text-base font-semibold tracking-wide">
               Explore my work
             </span>
             <ArrowDownIcon className="size-5" />
-          </button>
-          <button className="inline-flex items-center gap-2 px-6 py-2 border border-gray-800 bg-white text-gray-800 rounded-xl h-12">
+          </Link>
+          <Link href="#contact" className="inline-flex items-center gap-2 px-6 py-2 border border-gray-800 bg-white text-gray-800 rounded-xl h-12">
             <span className="text-sm lg:text-base font-semibold tracking-wide">
               👋
             </span>
             <span className="text-sm lg:text-base font-semibold tracking-wide">
               Let's chat
             </span>
-          </button>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

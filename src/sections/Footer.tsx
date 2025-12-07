@@ -4,7 +4,7 @@ import { FaInstagram, FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 const footerLinks = [
   {
     title: "Instagram",
-    href: "https://www.instagram.com/skouz4/",
+    href: "https://www.instagram.com/le_skouza/",
     icon: <FaInstagram className="size-6" />,
     hoverColor:
       "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]",
@@ -35,7 +35,7 @@ const footerLinks = [
 export const Footer = () => {
   return (
     <footer className="relative overflow-x-clip z-10 py-6">
-      <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10 pointer-events-none"></div>
+      <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-sky-400/30 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10 pointer-events-none"></div>
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
           <div className="text-white/40">&copy; 2024. All rights reserved.</div>

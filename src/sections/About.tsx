@@ -111,7 +111,7 @@ const myHobbies = [
 
 export const AboutSection = () => {
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24" id="about">
       <SectionHeader
         eyebrow="About Me"
         title="A Glimpse Into My World"

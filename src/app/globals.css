@@ -17,3 +17,7 @@
         @apply max-w-7xl mx-auto;
     }
 }
+
+*{
+    scroll-behavior: smooth;
+}
